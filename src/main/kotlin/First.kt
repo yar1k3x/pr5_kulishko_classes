@@ -1,7 +1,7 @@
 import kotlin.math.abs
 
 // Класс для представления треугольника
-class Triangle(private val pointA: Point, private val pointB: Point, private val pointC: Point) {
+class Triangle(val pointA: Point, val pointB: Point, val pointC: Point) {
 
     // Функция для проверки, находится ли точка внутри треугольника
     fun isPointInsideTriangle(point: Point): Boolean {
@@ -34,12 +34,3 @@ fun readPointFromConsole(): Point {
     return Point(x, y)
 }
 
-// Функция для создания треугольника с вводом координат его вершин
-fun readTriangleFromConsole(): Triangle {
-    println("Введите координаты вершин треугольника:")
-    val pointA = readPointFromConsole()
-    val pointB = readPointFromConsole()
-    val pointC = readPointFromConsole()
-
-    return Triangle(pointA, pointB, pointC)
-}
